@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="styelsheet" href="./div_style.css"> -->
+
+    <style>
+
+
+.container div{
+/* height: 100px; */
+border: 1px solid black;
+/* background-color: #fff; */
+}
+
+.header_col{
+    width: 25%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: aqua;
+}
+.normal_row {
+    height: 50px;
+    width: 100%;
+    display: flex;
+}
+
+.medium_row {
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+.medium_row_left_right {
+    height: 100%;
+    width: 35%;
+    display: flex;
+}
+
+.medium_row_center {
+    height: 100%;
+    width: 30%;
+}
+
+.big_row {
+    height: 150px;
+    width: 100%;
+    display: flex;
+}
+
+.big_col {
+    width: 50%;
+    height: 100%;
+}
+
+.big_col_right_row {
+    width: 100%;
+    height: 50px;
+}
+
+.bottom_left {
+    width: 25%;
+    height: 100%;
+}
+
+.bottom_right {
+    width: 75%;
+    height: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+         
+        <div class="normal_row">
+            <div class="header_col">1</div>
+            <div class="header_col">2</div>
+            <div class="header_col">3</div>
+            <div class="header_col">4</div>
+        </div>
+        
+        <div class="medium_row">
+            <div class="medium_row_left_right"></div>
+            <div class="medium_row_center">
+                <div class="normal_row"></div>
+                <div class="normal_row"></div>
+            </div>
+            <div class="medium_row_left_right"></div>
+        </div>
+
+        <div class="big_row">
+            <div class="big_col"></div>
+            <div class="big_col">
+                <div class="big_col_right_row"></div>
+                <div class="big_col_right_row"></div>
+                <div class="big_col_right_row"></div>
+            </div>
+        </div>
+        <div></div>
+        <div class="normal_row">
+            <div class="bottom_left"></div>
+            <dif class="bottom_right"></dif>
+        </div>
+
+    </div>
+    
+</body>
+</html>
