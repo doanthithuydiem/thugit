@@ -146,22 +146,17 @@
 //     ip2 = document.getElementById('ip2');
 //   }); 
 
-// function getlog() {
-//    const a = document.getElementById('a').value;
-//    const b = document.getElementById('b').value;
-//    const package = document.getElementById('result')
-//    if (!a || !b) {
-//       alert("The html not ready!!!!")
-//       return;
-//    }
-//    package.innerHTML = Number(a) + Number(b)
-
-// }
-
-
-// var arr = [1,2,3,4,5,6,]; bài tập
-// var arr = [1, 2, 3, 4, 5, 6]
-// console.log(arr[2])
+function getlog() {
+   const a = document.getElementById('a').value;
+   const b = document.getElementById('b').value;
+   const package = document.getElementById('result')
+   if (!a || !b) {
+      alert("The html not ready!!!!")
+      return;
+   }
+   // package.innerHTML = Number(a) + Number(b)
+   alert(Number(a) + Number(b))
+}
 
 var arr = [
      {id:1,name:'a', class:'c1'}, 
@@ -173,24 +168,24 @@ var arr = [
 ]
 
 
-function renderTable(){
-   var html = '';
-for (const item of arr){
-   html=+ `<tr><td>${item.id}</td>
-   <td>${item.name}</td>
-   <td>${item.class}</td>
-   <td>
+// function renderTable(){
+//    var html = '';
+// for (const item of arr){
+//    html=+ `<tr><td>${item.id}</td>
+//    <td>${item.name}</td>
+//    <td>${item.class}</td>
+//    <td>
 
-     <buton onclick'deleteItem(${item.id})'>delete</buton>
+//      <buton onclick'deleteItem(${item.id})'>delete</buton>
 
-   </td>
-   </tr>`
-}
+//    </td>
+//    </tr>`
+// }
 
-var tbody = document.querySelector('table tbody');
+// var tbody = document.querySelector('table tbody');
 
-tbody.innerHTML = html;
-}
+// tbody.innerHTML = html;
+// }
 
 // var html = '';
 // for (const item of arr){
@@ -209,12 +204,12 @@ tbody.innerHTML = html;
 
 // tbody.innerHTML = html;
 
-renderTable();
+// renderTable();
 
-function deleteItem(id){
-   arr.splice(id-1,1);
-   renderTable();
-}
+// function deleteItem(id){
+//    arr.splice(id-1,1);
+//    renderTable();
+// }
 
 
 function addnew(){
@@ -230,7 +225,7 @@ function addnew(){
    ip[0].value = '';
    ip[1].value = '';
 
-   renderTable();
+   // renderTable();
 }
 
 
