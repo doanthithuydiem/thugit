@@ -7,9 +7,9 @@
 // //     text += "<li>" + fruits[i] + "</li>";
 // }
 
-var a = document.getElementById("a");
-var b = document.getElementById("b");
-var c = document.getElementById("result");
+// var a = document.getElementById("a");
+// var b = document.getElementById("b");
+// var c = document.getElementById("result");
 
 // function getlog(){
 // //alert(Number(a.value) + Number( b.value))
@@ -99,7 +99,7 @@ function addnew() {
  */
 function Edit(id) {
   var ip = document.getElementsByTagName("input");
-  ip[2].setAttribute("value", id);
+  ip[2].setAttribute("value", id);  //truyền value của input hidden vào
   var itemEdit = null;
   for (const item of arr) {
     if (item.id === id) {
@@ -152,3 +152,75 @@ btn_update.onclick = function () {
 //     ip[z-1].value = classItem;
 
 // }
+
+// function getName(param, callback){
+//   let name = `Hello ${param}`
+//    return callback(name);  //callback = logName 
+// }
+
+// function logName(name){
+//   console.log(name)
+// }
+
+// getName('Diem', logName);
+
+
+
+// function sum(x){
+//   return function (y){
+//     return x+y
+//   }
+// }
+// let result = sum(10);
+// console.log(result(10))
+// console.log(result(30))
+
+//giam gia 20%
+// function discount(price, percent){
+//   return price - price * percent 
+// }
+
+// console.log(discount(10000, 0.2))
+
+// function discount(price){
+//   return function (percent) {
+//     return price - price * percent 
+//   }
+   
+// }
+//  let productPrice = discount(10000);
+
+//  console.log(productPrice(0.2))
+
+//đầu vào 2 tham số 1 mạng và 1hàm,callback, for each lạc qua các phần tử
+const arr3 = [1,2,3,4,5,6];
+
+
+function myFunction(arr, callback){
+  for (let index = 0; index < arr3.length; index++) {
+    callback (arr3[index]);
+    
+  } 
+}
+ 
+myFunction (arr3, function(item1){
+  console.log(item1 * 2)
+})
+
+
+function map(arr3, callback){
+  const newArr = [];
+  for (let index = 0; index < arr3.length; index++) {
+    
+    newArr.push(callback (arr3[index], index, arr))
+  }
+  return newArr;
+}
+
+let result = map (arr3, function (item, index, arr){
+  console.log(item, index, arr)
+  return item * 2
+}) 
+
+  
+console.log(result);
