@@ -193,6 +193,10 @@ btn_update.onclick = function () {
 //  console.log(productPrice(0.2))
 
 //đầu vào 2 tham số 1 mạng và 1hàm,callback, for each lạc qua các phần tử
+// arr3.array.forEach(function(item) {
+//   console.log(item)
+// }); dùng callback viết lại hàm
+
 const arr3 = [1,2,3,4,5,6];
 
 

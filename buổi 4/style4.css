@@ -1,0 +1,118 @@
+.menu{
+    list-style-type: none;
+    display: flex;
+    background-color: aliceblue;
+    color: black;
+    padding-inline-start: 0;
+    
+}
+
+.menu_item{
+    display: inline-block;
+    text-align: left;
+    padding-right: 20px;
+}
+.menu_item2{
+    display: inline-block;
+    margin-inline-start: 10px;
+}
+.image{
+    width: 100%;
+    height: 50%;
+}
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px;
+}
+
+.mydiv{
+    width: 100%;
+    display: flex;
+}
+.div1{
+    width: 30%;
+    margin-right: 30px;
+    text-align: left;
+    
+}
+
+.img1{
+    float: right;
+}
+.img2{
+    float: left;
+}
+.div2{
+    width: 40%;
+    margin: auto;
+
+}
+.div3{
+    width: 30%;
+    margin-left: 30px;
+}
+.clearfix{
+    overflow: auto;
+}
+.div1 h5{
+    text-align: right;
+}
+.div1 p {
+    text-align: right;
+}
+.container{
+    display: flex;
+}
+.divchild{
+    width: 50%;
+    height: 300px;
+}
+.divchild1{
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    margin: 20px;
+
+}
+h2{ 
+    text-align: center;
+    text-transform: uppercase;
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(255, 127, 191);
+    padding-top: 10px;
+}
+table{
+    width: 100%;
+}
+.divchild2{
+    background-color: aquamarine;
+    display: flex;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    justify-content: center;
+
+}
+.gallery{
+    margin: 5px;
+    padding: 30px;
+    float: left;
+    width: 200px;
+}
+.gallery:hover{
+    border: 1px soil yellow;
+
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+
+}

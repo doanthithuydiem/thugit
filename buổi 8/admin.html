@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./admin.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="float-left submit-button">
+    <div>
+      <div>
+        <h4>Danh mục</h4>
+        <table>
+          <tr>
+            <td>Manufacturer</td>
+            <td>Category</td>
+            <td>Product</td>
+            <td>Account</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <h4>Manufacturer</h4>
+        <table>
+          <tr>
+            <td>SAMSUNG</td>
+            <td>APPLE</td>
+            <td>XIAOMI</td>
+            <td>OPPO</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <h4>Category</h4>
+        <form action="">
+          <label for="ad">Address:</label><br>
+          <select name="ad">
+            <option value="a">Select Cale</option>
+            <option value="b"></option>
+            <option value="c"></option>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div>
+        <form action="">
+          <label for="gsearch"></label>
+          <input type="search" id="gsearch" name="gsearch">
+          <button>Search</button>
+        </form>
+      </div>
+      <div>
+        <button onclick="addnew()">Add new</button>
+      </div>
+      <div>
+        <table id="productele">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>price</th>
+              <th>info</th>
+              <th>Detail</th>
+              <th>Star</th>
+              <th>image</th>
+              <th>NSX</th>
+              <th>Category</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./admin.js"></script>
+</body>
+
+</html>

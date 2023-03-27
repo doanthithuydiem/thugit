@@ -1,0 +1,130 @@
+.banner{
+    padding: 20px;
+    background-color: grey;
+    
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    
+}
+.flex-containe-list {
+    margin-right: 10px;
+    padding-left: 20px;
+    width: 300px;
+    font-size: 15px;
+    
+}
+
+.flex-containe-list-item {
+    background-color: skyblue;
+    margin-bottom: 10px;
+    color: white;
+    text-align: left;
+    line-height: 25px;
+}
+
+.footer{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+}
+
+.header{
+    background-color: skyblue;
+    color: white;
+    padding: 10px;
+}
+
+.flex-container2{
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    justify-content: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.div-item1{
+    text-align: center;
+    background-color: greenyellow;
+    padding: 30px;
+    width: 30%;
+}
+.div-item2{
+    text-align: center;
+    background-color: plum;
+    padding: 30px;
+    margin-left: 10px;
+    width: 20%;
+}
+.div-item3{
+    text-align: center;
+    background-color:orange;
+    padding: 30px;
+    width: 25%;
+    margin-right: 5px;
+}
+.div-item4{
+    text-align: center;
+    background-color:orange;
+    padding: 30px;
+    width: 25%;
+}
+
+.divchild1{
+    background-color: tomato;
+    color: white;
+    font-size: 30px;
+    text-align:center;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.divchild2{
+    background-color: greenyellow;
+    color: white;
+    font-size: 30px;
+    text-align:center;
+    float: left;
+    width: 70%;
+    height: 50%;
+}
+.divchild3{
+    background-color: pink;
+    color: white;
+    font-size: 30px;
+    text-align:center;
+    float: left;
+    width: 35%;
+    height: 50%;
+}
+.divchild4a{
+    background-color: purple;
+    color: white;
+    font-size: 30px;
+    text-align:center;
+    float: left;
+    width: 35%;
+    height: 25%;
+    
+}
+.divchild4b{
+    background-color: purple;
+    color: white;
+    font-size: 30px;
+    text-align:center;
+    float: left;
+    width: 35%;
+    height: 25%;
+}   
+
+@media only screen and (max-width: 768px) {
+    .divchild2 {
+        width: 100%;
+    }
+}

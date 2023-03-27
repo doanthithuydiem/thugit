@@ -1,0 +1,41 @@
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px;
+}
+
+.mydiv{
+    width: 100%;
+    display: flex;
+}
+.div1{
+    width: 30%;
+    margin-right: 30px;
+    text-align: left;
+    
+}
+
+.img1{
+    float: right;
+}
+.img2{
+    float: left;
+}
+.div2{
+    width: 40%;
+    margin: auto;
+
+}
+.div3{
+    width: 30%;
+    margin-left: 30px;
+}
+.clearfix{
+    overflow: auto;
+}
+.div1 h5{
+    text-align: right;
+}
+.div1 p {
+    text-align: right;
+}

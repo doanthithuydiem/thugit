@@ -1,0 +1,24 @@
+.gallery {
+  margin: 5px;
+  padding: 30px;
+  float: left;
+  width: 200px;
+}
+
+.gallery:hover {
+  border: 1px soil yellow;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+header {
+  text-transform: uppercase;
+}/*# sourceMappingURL=test.css.map */
