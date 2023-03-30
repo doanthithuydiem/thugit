@@ -1,0 +1,43 @@
+.menu{
+    list-style-type: none;
+    display: flex;
+    background-color: yellow;
+    color: black;
+    padding-inline-start: 0;
+    
+}
+
+.menu_item{
+    display: inline-block;
+    text-align: left;
+    padding-right: 20px;
+}
+.menu_item2{
+    display: inline-block;
+    margin-inline-start: 10px;
+}
+.image{
+    width: 100%;
+    height: 50%;
+}
+
+.container{
+    position: relative;
+    z-index: -3;
+}
+
+.gallery{
+    margin: 5px;
+    padding: 30px;
+    float: left;
+    width: 200px;
+}
+
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+table, th, td, tr{
+    border: 1px solid black;
+
+}
