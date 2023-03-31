@@ -132,13 +132,13 @@ var btn_update = document.getElementById("btn-update");
 
   //   arr[index].id = ip;
   arr[index].name = document.getElementById('eName').value;
-  arr[index].price = allInput[1].value;
-  arr[index].info = allInput[1].value;
-  arr[index].Detail = allInput[1].value;
-  arr[index].Star = allInput[1].value;
-  arr[index].image = allInput[1].value;
-  arr[index].NSX = allInput[1].value;
-  arr[index].Category = allInput[1].value;
+  arr[index].price = document.getElementById('price').value;
+  arr[index].info = document.getElementById('w3review').value;
+  arr[index].Detail = document.getElementById('detail').value;
+  arr[index].Star = document.getElementById('star').value;
+  arr[index].image = document.getElementById('image').value;
+  arr[index].NSX = document.getElementById('manu').value;
+  arr[index].Category = document.getElementById('cate').value;
   localStorage.setItem("productele", JSON.stringify(productele));
   fn_productele(productele);
   console.log(index)
