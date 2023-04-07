@@ -33,39 +33,39 @@
 // }
 
 
-// function fn_productele() {
-//   var arayData = localStorage.getItem("productele");
-//   arayData = JSON.parse(arayData);
-//   console.log("arayData", arayData);
-//   var html = "";
-//   for (const item of arayData) {
-//     html += `<tr>
-//       <td>${item.id}</td>
-//       <td>${item.name}</td>
-//       <td>${item.price}</td>
-//       <td>${item.info}</td>
-//       <td>${item.Detail}</td>
-//       <td>${item.Star}</td>
-//       <td>${item.image}</td>
-//       <td>${item.NSX}</td>
-//       <td>${item.Category}</td>
-//       <td>${item.Edit}
-//       <button type="button" onclick='Edit(${JSON.stringify(
-//         item
-//       )})' data-toggle="modal" data-target="#editModal">Edit</button>
-//       <button type="button" class="btn btn-warning text-light" onclick ="editProduct(${productList[index].id})">
-//         Edit
-//       </button>
-//       </td>
-//       <td>${item.Delete}
-//       <button onclick='deleteItem(${item.id})'>delete</button>
-//       </td>
-//       </tr>`;
-//   }
-//   var tbody = document.querySelector("#productele tbody");
+function fn_productele() {
+  var arayData = localStorage.getItem("productele");
+  arayData = JSON.parse(arayData);
+  console.log("arayData", arayData);
+  var html = "";
+  for (const item of arayData) {
+    html += `<tr>
+      <td>${item.id}</td>
+      <td>${item.name}</td>
+      <td>${item.price}</td>
+      <td>${item.info}</td>
+      <td>${item.Detail}</td>
+      <td>${item.Star}</td>
+      <td>${item.image}</td>
+      <td>${item.NSX}</td>
+      <td>${item.Category}</td>
+      <td>${item.Edit}
+      <button type="button" onclick='Edit(${JSON.stringify(
+        item
+      )})' data-toggle="modal" data-target="#editModal">Edit</button>
+      <button type="button" class="btn btn-warning text-light" onclick ="editProduct(${productList[index].id})">
+        Edit
+      </button>
+      </td>
+      <td>${item.Delete}
+      <button onclick='deleteItem(${item.id})'>delete</button>
+      </td>
+      </tr>`;
+  }
+  var tbody = document.querySelector("#productele tbody");
 
-//   tbody.innerHTML = html;
-// }
+  tbody.innerHTML = html;
+}
 
 // // get_productele();
 
@@ -139,34 +139,34 @@
 // }
 
  // Khai báo
- listProduct = [];
+//  listProduct = [];
   
-function addNewProduct() {
-  let getId = document.querySelector("#id").value;
-  let getName = document.querySelector("#name").value;
-  let getPrice = document.querySelector("#price").value;
-  let getInfo = document.querySelector("#info").value;
-  let getDetail = document.querySelector("#detail").value;
-  let getStar = document.querySelector("#star").value;
-  let getImage = getImgName(document.querySelector("#image").value);
-  let getManufacturer = document.querySelector("#manufacturer").value;
-  let getCategory = document.querySelector("#category").value;
-  let newProduct = {
-    id: getId,
-    name: getName,
-    price: getPrice,
-    info: getInfo,
-    detail: getDetail,
-    star: getStar,
-    image: getImage,
-    manufacturer: getManufacturer,
-    category: getCategory,
-  };
-  // Push vao mang productList
-  productList.push(newProduct);
-  // console.log("listProduct", productList);
-  localStorage.setItem("Product", JSON.stringify(productList));
-  // console.log(localStorage.setItem("Product", JSON.stringify(productList)));
-  resetForm();
-  renderProduct();
-}
+// function addNewProduct() {
+//   let getId = document.querySelector("#id").value;
+//   let getName = document.querySelector("#name").value;
+//   let getPrice = document.querySelector("#price").value;
+//   let getInfo = document.querySelector("#info").value;
+//   let getDetail = document.querySelector("#detail").value;
+//   let getStar = document.querySelector("#star").value;
+//   let getImage = getImgName(document.querySelector("#image").value);
+//   let getManufacturer = document.querySelector("#manufacturer").value;
+//   let getCategory = document.querySelector("#category").value;
+//   let newProduct = {
+//     id: getId,
+//     name: getName,
+//     price: getPrice,
+//     info: getInfo,
+//     detail: getDetail,
+//     star: getStar,
+//     image: getImage,
+//     manufacturer: getManufacturer,
+//     category: getCategory,
+//   };
+//   // Push vao mang productList
+//   productList.push(newProduct);
+//   // console.log("listProduct", productList);
+//   localStorage.setItem("Product", JSON.stringify(productList));
+//   // console.log(localStorage.setItem("Product", JSON.stringify(productList)));
+//   resetForm();
+//   renderProduct();
+// }
