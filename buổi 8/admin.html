@@ -46,7 +46,7 @@
         <div class="SideBarSection">
           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <!-- Danh mục quản lý -->
-            <h4 style="font-weight: bold">Danh mục</h4>
+            <h4 style="font-weight: bold" id="test">Danh mục</h4>
             <ul class="list-group">
               <li class="list-group-item">
                 <button type="button" class="btnClass">Manufacturer</button>
@@ -106,10 +106,10 @@
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                      <input type="text" class="form-control" value="" />
+                      <input type="text" id="searchItem" class="form-control" value="" />
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                      <button type="button" class="btn btn-success">Search</button>
+                      <button type="button" class="btn btn-success" onclick="search()">Search</button>
                     </div>
                   </div>
                 </div>
@@ -149,33 +149,35 @@
                               <label for="star">Star</label><br>
                               <input type="text" id="star" name="star" placeholder="input star"> <br><br>
                               <label for="file">image</label><br>
-                              <input type="file" name="choose file" />
+                              <input type="file" id="aImage" name="choose file" />
                               <label for="manu">Manufacturer</label><br>
-                              <select name="ad">
+                              <select name="manu" id="manufacturer">
                                 <option value="1">SAMSUNG</option>
                                 <option value="2">APPLE</option>
                                 <option value="3">OPPO</option>
                                 <option value="4">XIAOMI</option>
                               </select><br>
-                              <label for="cate">Categero</label>
-                              <select name="ad">
-                                <option value="a"></option>
-                                <option value="b"></option>
-                                <option value="c"></option>
+                              <label for="cate">Category</label>
+                              <select class="form-control" id="Category">
+                                <option value="0">-- Select Category --</option>
+                                <option value="1">Điện thoại</option>
+                                <option value="2">Tablet</option>
+                                <option value="3">Laptop</option>
                               </select>
                             </form>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-info" onclick='Add()'>Save</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Reser</button>
+                            <button type="button" class="btn btn-info" data-dismiss="modal"
+                              onclick='Add()'>Save</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Reset</button>
                           </div>
                         </div>
                       </div>
                     </div>
                     <!--End Add New Product -->
                     <!-- Table -->
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="productele">
                       <thead>
                         <tr>
                           <th>Id</th>
@@ -192,43 +194,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <!-- Row 1 -->
-                        <tr>
-                          <td>1</td>
-                          <td>Samsung Galaxy S22 Ultra 5G</td>
-                          <td>30.990.000₫</td>
-                          <td>6.9 inches, Chip MediaTek Helio G85 (12nm) mạnh mẽ, Ram 4G, Pin 7000 mAh</td>
-                          <td>ProductDetail1</td>
-                          <td>5</td>
-                          <td>image1.jpg</td>
-                          <td>SAMSUNG</td>
-                          <td>Điện thoại</td>
-                          <td>
-                            <button type="button" class="btn btn-warning" id="edit-product-item_1" data-toggle="modal" data-target="#myModal">Edit</button>
-                          </td>
-                          <td>
-                            <button type="button" class="btn btn-danger" id="delete-product-item_1">Delete</button>
-                          </td>
-                        </tr>
 
-                        <!-- Row 2 -->
-                        <tr>
-                          <td>1</td>
-                          <td>Samsung Galaxy S22 Ultra 5G</td>
-                          <td>30.990.000₫</td>
-                          <td>6.9 inches, Chip MediaTek Helio G85 (12nm) mạnh mẽ, Ram 4G, Pin 7000 mAh</td>
-                          <td>ProductDetail1</td>
-                          <td>5</td>
-                          <td>image1.jpg</td>
-                          <td>SAMSUNG</td>
-                          <td>Điện thoại</td>
-                          <td>
-                            <button type="button" class="btn btn-warning" id="edit-product-item_2">Edit</button>
-                          </td>
-                          <td>
-                            <button type="button" class="btn btn-danger" d="delete-product-item_2">Delete</button>
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
                     <!-- End Table -->
@@ -258,54 +224,8 @@
     <!--End Detail -->
 
     <!-- Add New Product -->
-    
-    <!-- Modal edit- update -->
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Update Product</h4>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <label for="fId">id</label><br>
-              <input type="text" name="fname" id="fId" placeholder="input id" /><br><br>
-              <label for="eName">name</label><br>
-              <input type="text" name="name" id="eName" placeholder="input name" /><br><br>
-              <label for="price">price</label><br>
-              <input type="text" name="price" id="price" placeholder="input price"><br><br>
-              <label for="w3review">info</label><br>
-              <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br><br>
-              <label for="detail">Detail</label><br>
-              <textarea id="detail" name="detail" rows="4" cols="50"></textarea><br><br>
-              <label for="star">Star</label>
-              <input type="text" id="star" name="star" placeholder="input star"> <br><br>
-              <label for="file">image</label><br>
-              <input type="file" id="image" name="choose file" />
-              <label for="manu">Manufacturer</label><br>
-              <select name="manu" id="manu">
-                <option value="1">SAMSUNG</option>
-                <option value="2">APPLE</option>
-                <option value="3">OPPO</option>
-                <option value="4">XIAOMI</option>
-              </select><br>
-              <label for="cate">Categero</label>
-              <select name="cate" id="cate">
-                <option value="a"></option>
-                <option value="b"></option>
-                <option value="c"></option>
-              </select>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="btn-update" onclick="update()">Update</button>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <div id="load_editmodal"></div>
 
   </div>
   <script src="./admin.js"></script>

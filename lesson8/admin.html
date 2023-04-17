@@ -82,54 +82,90 @@
         </table>
       </div>
 
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <!--  Modal Add New  -->
+      <!-- Modal Body-->
+      <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                  aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Create New Product</h4>
+              <h5 class="modal-title" id="modalTitleId">Create New Product</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form action="">
-                <label for="id">id</label><br>
-                <input type="text" name="id" id="id" placeholder="input id"><br><br>
-                <label for="name">name</label><br>
-                <input type="text" name="name" id="name" placeholder="input name"><br><br>
-                <label for="price">price</label><br>
-                <input type="text" name="price" id="price" placeholder="input price"><br><br>
-                <label for="w3review">info</label><br>
-                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br><br>
-                <label for="detail">Detail</label><br>
-                <textarea id="detail" name="detail" rows="4" cols="50"></textarea><br><br>
-                <label for="star">Star</label><br>
-                <input type="text" id="star" name="star" placeholder="input star"> <br><br>
-                <label for="file">image</label><br>
-                <input type="file" name="choose file" />
-                <label for="manu">Manufacturer</label><br>
-                <select name="ad">
-                  <option value="1">SAMSUNG</option>
-                  <option value="2">APPLE</option>
-                  <option value="3">OPPO</option>
-                  <option value="4">XIAOMI</option>
-                </select><br>
-                <label for="cate">Categero</label>
-                <select name="ad">
-                  <option value="a"></option>
-                  <option value="b"></option>
-                  <option value="c"></option>
-                </select>
-              </form>
+              <div class="container-fluid">
+                <div class="col-12">
+                  <!-- Product Properties -->
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Id</label>
+                    <input type="text" name="id" id="id" class="form-control" placeholder="Input Id {1,2,....}" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Input Name" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Price</label>
+                    <input type="text" name="price" id="price" class="form-control" placeholder="Input price" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Info</label>
+                    <textarea class="form-control" name="info" id="info" rows="3" placeholder="Input Info"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Detail</label>
+                    <textarea class="form-control" name="detail" id="detail" rows="4"
+                      placeholder="Input detail"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Star</label>
+                    <input type="text" name="star" id="star" class="form-control" placeholder="Input field" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Image</label>
+                    <input type="file" name="image" id="image" class="form-control text-secondary" accept="image/*" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Manufacturer</label>
+                    <select class="form-select form-select-md text-secondary" name="manufacturer" id="manufacturer">
+                      <option selected value="0">--Choose a Manufacturer--</option>
+                      <option value="SAMSUNG">SAMSUNG</option>
+                      <option value="APPLE">APPLE</option>
+                      <option value="XIAOMI">XIAOMI</option>
+                      <option value="OPPO">OPPO</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label fw-bold">Category</label>
+                    <select class="form-select form-select-md text-secondary" name="" id="category">
+                      <option selected value="0">--Choose a Category--</option>
+                      <option value="Mobile Phone">Mobile Phone</option>
+                      <option value="Tablet">Tablet</option>
+                      <option value="Laptop">Laptop</option>
+                    </select>
+                  </div>
+                  <!-- Action -->
+                  <div class="col-12">
+                    <button type="button" class="btn btn-primary fw-semibold" onclick="addNewProduct()">
+                      Save
+                    </button>
+                    <button type="button" class="btn btn-warning text-light fw-semibold">
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick='Add()'>Save changes</button>
+              <div class="col-12">
+                <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal">
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
 
       <!-- Modal -->
       <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

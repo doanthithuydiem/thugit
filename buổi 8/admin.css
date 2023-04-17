@@ -36,3 +36,7 @@ table, th, td, tr{
   .btnClass:focus {
     color: blue
   } 
+
+  @media (max-width:360px) {
+    
+  }

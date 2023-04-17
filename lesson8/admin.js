@@ -30,7 +30,7 @@ var productele = [
 function get_productele() {
   localStorage.setItem("productele", JSON.stringify(productele));
 }
-
+//thêm sản phẩm
 function Add() {
   console.log($("input[id='id']").val());
   console.log($("input[name='fname']").val());
@@ -46,6 +46,7 @@ function Add() {
     NSX: ip[6].value,
     Category: ip[7].value,
   };
+  // push
   productele.push(newObj);
   ip[0].value = "";
   ip[1].value = "";
@@ -55,11 +56,8 @@ function Add() {
   ip[5].value = "";
   ip[6].value = "";
   ip[7].value = "";
-  
 }
-
-
-
+//render sp ra giao diện và lưu
 function fn_productele() {
   var arayData = localStorage.getItem("productele");
   arayData = JSON.parse(arayData);
@@ -95,10 +93,16 @@ function fn_productele() {
 
 fn_productele();
 
+// xóa item
+function deleteItem(id) {
+  arr.splice(item - 1, 1);
+  fn_productele();
+}
+
 function Edit(item) {
   console.log(item);
   var ip = document.getElementsByTagName("input");
-  ip[2].setAttribute("value", id); 
+  ip[2].setAttribute("value", id);
   var itemEdit = null;
   for (const item of productele) {
     if (item.id === id) {
@@ -114,24 +118,23 @@ function Edit(item) {
   ip[4].value = Star;
   ip[5].value = image;
   ip[6].value = NSX;
-  ip[7].value = Category; 
+  ip[7].value = Category;
 }
-
 
 var btn_update = document.getElementById("btn-update");
 /**
  * handle function of button update when click
  */
-  btn_update.onclick = () => {
+btn_update.onclick = () => {
   var allInput = document.getElementsByTagName("input");
-  var indexID = parseInt($('#fId').val());
+  var indexID = parseInt($("#fId").val());
   let arr = productele;
   var index = arr.findIndex((item) => {
     return item.id == indexID;
   });
 
   //   arr[index].id = ip;
-  arr[index].name = document.getElementById('eName').value;
+  arr[index].name = document.getElementById("eName").value;
   arr[index].price = allInput[1].value;
   arr[index].info = allInput[1].value;
   arr[index].Detail = allInput[1].value;
@@ -141,7 +144,7 @@ var btn_update = document.getElementById("btn-update");
   arr[index].Category = allInput[1].value;
   localStorage.setItem("productele", JSON.stringify(productele));
   fn_productele(productele);
-  console.log(index)
+  console.log(index);
 
   allInput[0].value = "";
   allInput[1].value = "";
@@ -152,4 +155,4 @@ var btn_update = document.getElementById("btn-update");
   allInput[6].value = "";
   allInput[7].value = "";
   console.log(this.id);
-}
+};
